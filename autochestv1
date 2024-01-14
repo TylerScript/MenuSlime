@@ -11,7 +11,6 @@ local ImageLabel = Instance.new("ImageLabel")
 local Conelogo = Instance.new("UICorner")
 local NameUi = Instance.new("TextLabel")
 local garname = Instance.new("UIGradient")
-local beli = Instance.new("TextLabel")
 
 -- Properties:
 
@@ -25,7 +24,7 @@ chestui.BackgroundTransparency = 0.300
 chestui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 chestui.BorderSizePixel = 0
 chestui.Position = UDim2.new(0.363530785, 0, 0.33449477, 0)
-chestui.Size = UDim2.new(0, 235, 0, 253)
+chestui.Size = UDim2.new(0, 235, 0, 189)
 
 Conerui.Name = "Conerui"
 Conerui.Parent = chestui
@@ -52,7 +51,7 @@ NameUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 NameUi.BackgroundTransparency = 1.000
 NameUi.BorderColor3 = Color3.fromRGB(0, 0, 0)
 NameUi.BorderSizePixel = 0
-NameUi.Position = UDim2.new(0.0723404288, 0, 0.530635536, 0)
+NameUi.Position = UDim2.new(0.0723404288, 0, 0.66502291, 0)
 NameUi.Size = UDim2.new(0, 200, 0, 50)
 NameUi.Font = Enum.Font.FredokaOne
 NameUi.Text = "SlimeX Chest"
@@ -65,29 +64,16 @@ garname.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB
 garname.Name = "garname"
 garname.Parent = NameUi
 
-beli.Name = "beli"
-beli.Parent = chestui
-beli.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-beli.BackgroundTransparency = 1.000
-beli.BorderColor3 = Color3.fromRGB(0, 0, 0)
-beli.BorderSizePixel = 0
-beli.Position = UDim2.new(0.0723404288, 0, 0.727272749, 0)
-beli.Size = UDim2.new(0, 200, 0, 50)
-beli.Font = Enum.Font.FredokaOne
-beli.Text = ""
-beli.TextColor3 = Color3.fromRGB(0, 0, 0)
-beli.TextSize = 20.000
-
 -- Scripts:
 
-local function NUHGFC_fake_script() -- chestui.moveui 
+local function IUDAY_fake_script() -- chestui.moveui 
     local script = Instance.new('LocalScript', chestui)
 
     script.Parent.Draggable = true
     script.Parent.Active = true
 end
-coroutine.wrap(NUHGFC_fake_script)()
-local function JRUGDP_fake_script() -- chestui.Auto Farm Chest 
+coroutine.wrap(IUDAY_fake_script)()
+local function GZSPOIN_fake_script() -- chestui.Auto Farm Chest 
     local script = Instance.new('LocalScript', chestui)
 
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest SliemtHub!<Color=/>"):Display()
@@ -282,10 +268,4 @@ local function JRUGDP_fake_script() -- chestui.Auto Farm Chest
         end
     end)
 end
-coroutine.wrap(JRUGDP_fake_script)()
-local function DOIK_fake_script() -- beli.beli 
-    local script = Instance.new('LocalScript', beli)
-
-    game.PlayerGui.path,beli
-end
-coroutine.wrap(DOIK_fake_script)()
+coroutine.wrap(GZSPOIN_fake_script)()
