@@ -37,15 +37,19 @@ Bananaicon.Image = "rbxassetid://15981329344"
 
 -- Scripts:
 
-local function JLIE_fake_script() -- stoptween.Banfake2 
+local function QVUW_fake_script() -- stoptween.Banfake2 
 	local script = Instance.new('LocalScript', stoptween)
 
-	game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
+	end)
 end
-coroutine.wrap(JLIE_fake_script)()
-local function NXJNS_fake_script() -- Bananaicon.Banfaker 
+coroutine.wrap(QVUW_fake_script)()
+local function DAJZPZ_fake_script() -- Bananaicon.Banfaker 
 	local script = Instance.new('LocalScript', Bananaicon)
 
+	script.Parent.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
+	end)
 end
-coroutine.wrap(NXJNS_fake_script)()
+coroutine.wrap(DAJZPZ_fake_script)()
