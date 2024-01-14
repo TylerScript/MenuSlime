@@ -17,8 +17,8 @@ stoptween.Parent = Bananahub
 stoptween.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
 stoptween.BorderColor3 = Color3.fromRGB(0, 0, 0)
 stoptween.BorderSizePixel = 0
-stoptween.Position = UDim2.new(0, 0, 0.30662021, 0)
-stoptween.Size = UDim2.new(0, 59, 0, 41)
+stoptween.Position = UDim2.new(0, 0, 0.25783971, 0)
+stoptween.Size = UDim2.new(0, 49, 0, 41)
 stoptween.Font = Enum.Font.SourceSans
 stoptween.Text = "Stop Tween"
 stoptween.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -31,25 +31,25 @@ Bananaicon.Parent = Bananahub
 Bananaicon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Bananaicon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Bananaicon.BorderSizePixel = 0
-Bananaicon.Position = UDim2.new(0.177700356, 0, 0.524390221, 0)
+Bananaicon.Position = UDim2.new(0.168408826, 0, 0.456445992, 0)
 Bananaicon.Size = UDim2.new(0, 52, 0, 49)
 Bananaicon.Image = "rbxassetid://15981329344"
 
 -- Scripts:
 
-local function QVUW_fake_script() -- stoptween.Banfake2 
+local function HHBXWY_fake_script() -- stoptween.Banfake2 
 	local script = Instance.new('LocalScript', stoptween)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
 	end)
 end
-coroutine.wrap(QVUW_fake_script)()
-local function DAJZPZ_fake_script() -- Bananaicon.Banfaker 
+coroutine.wrap(HHBXWY_fake_script)()
+local function BCTSXEU_fake_script() -- Bananaicon.Banfaker 
 	local script = Instance.new('LocalScript', Bananaicon)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
+	game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
 	end)
 end
-coroutine.wrap(DAJZPZ_fake_script)()
+coroutine.wrap(BCTSXEU_fake_script)()
