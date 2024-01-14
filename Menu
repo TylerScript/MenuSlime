@@ -1,0 +1,161 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local Menu = Instance.new("ScreenGui")
+local Framemenu = Instance.new("Frame")
+local framecn = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local Color1 = Instance.new("UIGradient")
+local Colorfarm = Instance.new("UIGradient")
+local Exit = Instance.new("TextButton")
+local UIGradient = Instance.new("UIGradient")
+local Menuscripts = Instance.new("ScrollingFrame")
+local bloxfruit = Instance.new("Frame")
+local conblox = Instance.new("UICorner")
+local clbloxfr = Instance.new("UIGradient")
+local imgbloxfr = Instance.new("ImageLabel")
+local imgcnbloxfr = Instance.new("UICorner")
+local srpblox = Instance.new("TextButton")
+
+-- Properties:
+
+Menu.Name = "Menu"
+Menu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Framemenu.Name = "Framemenu"
+Framemenu.Parent = Menu
+Framemenu.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Framemenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Framemenu.BorderSizePixel = 0
+Framemenu.Position = UDim2.new(0.250185728, 0, 0.318172485, 0)
+Framemenu.Size = UDim2.new(0, 430, 0, 244)
+
+framecn.Name = "framecn"
+framecn.Parent = Framemenu
+
+TextLabel.Parent = Framemenu
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0325581394, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 151, 0, 39)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "SlimeX Menu"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Color1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(87, 255, 230)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+Color1.Name = "Color1"
+Color1.Parent = TextLabel
+
+Colorfarm.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(22, 22, 22)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+Colorfarm.Name = "Colorfarm"
+Colorfarm.Parent = Framemenu
+
+Exit.Name = "Exit"
+Exit.Parent = Framemenu
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.727907002, 0, -0.0245901644, 0)
+Exit.Size = UDim2.new(0, 200, 0, 50)
+Exit.Font = Enum.Font.FredokaOne
+Exit.Text = "x"
+Exit.TextColor3 = Color3.fromRGB(243, 243, 243)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 16, 20)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = Exit
+
+Menuscripts.Name = "Menuscripts"
+Menuscripts.Parent = Framemenu
+Menuscripts.Active = true
+Menuscripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Menuscripts.BackgroundTransparency = 1.000
+Menuscripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Menuscripts.BorderSizePixel = 0
+Menuscripts.Position = UDim2.new(0, 0, 0.159836069, 0)
+Menuscripts.Size = UDim2.new(0, 430, 0, 195)
+Menuscripts.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+
+bloxfruit.Name = "bloxfruit"
+bloxfruit.Parent = Menuscripts
+bloxfruit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bloxfruit.BorderColor3 = Color3.fromRGB(255, 255, 255)
+bloxfruit.BorderSizePixel = 0
+bloxfruit.Position = UDim2.new(0.0325581394, 0, 0, 0)
+bloxfruit.Size = UDim2.new(0, 123, 0, 119)
+
+conblox.Name = "conblox"
+conblox.Parent = bloxfruit
+
+clbloxfr.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(23, 255, 209)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(39, 143, 255))}
+clbloxfr.Name = "clbloxfr"
+clbloxfr.Parent = bloxfruit
+
+imgbloxfr.Name = "imgbloxfr"
+imgbloxfr.Parent = bloxfruit
+imgbloxfr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+imgbloxfr.BorderColor3 = Color3.fromRGB(0, 0, 0)
+imgbloxfr.BorderSizePixel = 0
+imgbloxfr.Position = UDim2.new(0.178861782, 0, 0.0924369767, 0)
+imgbloxfr.Size = UDim2.new(0, 78, 0, 74)
+imgbloxfr.Image = "http://www.roblox.com/asset/?id=12538375807"
+
+imgcnbloxfr.CornerRadius = UDim.new(0, 50)
+imgcnbloxfr.Name = "imgcnbloxfr"
+imgcnbloxfr.Parent = imgbloxfr
+
+srpblox.Name = "srpblox"
+srpblox.Parent = bloxfruit
+srpblox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+srpblox.BackgroundTransparency = 1.000
+srpblox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+srpblox.BorderSizePixel = 0
+srpblox.Position = UDim2.new(0.08130081, 0, 0.714285731, 0)
+srpblox.Size = UDim2.new(0, 106, 0, 31)
+srpblox.Font = Enum.Font.FredokaOne
+srpblox.Text = "Blox Fruit"
+srpblox.TextColor3 = Color3.fromRGB(255, 255, 255)
+srpblox.TextScaled = true
+srpblox.TextSize = 14.000
+srpblox.TextWrapped = true
+
+-- Scripts:
+
+local function JDXZGT_fake_script() -- Exit.close 
+	local script = Instance.new('LocalScript', Exit)
+
+	local frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+	
+end
+coroutine.wrap(JDXZGT_fake_script)()
+local function KEJJ_fake_script() -- srpblox.scrloadblox 
+	local script = Instance.new('LocalScript', srpblox)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/Slimexhub/main/Slimex-hub"))()
+	end)
+end
+coroutine.wrap(KEJJ_fake_script)()
+local function SJILER_fake_script() -- Framemenu.movemenu 
+	local script = Instance.new('LocalScript', Framemenu)
+
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end
+coroutine.wrap(SJILER_fake_script)()
