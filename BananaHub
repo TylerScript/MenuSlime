@@ -49,7 +49,7 @@ local function DAJZPZ_fake_script() -- Bananaicon.Banfaker
 	local script = Instance.new('LocalScript', Bananaicon)
 
 	script.Parent.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
+		game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
 	end)
 end
 coroutine.wrap(DAJZPZ_fake_script)()
