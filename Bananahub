@@ -41,7 +41,7 @@ local function OEXF_fake_script() -- stoptween.Banfake2
 	local script = Instance.new('LocalScript', stoptween)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
+		game.Players.LocalPlayer:Kick("Có Cái Lồn")
 	end)
 end
 coroutine.wrap(OEXF_fake_script)()
@@ -49,7 +49,7 @@ local function NAUUSS_fake_script() -- Bananaicon.Banfaker
 	local script = Instance.new('LocalScript', Bananaicon)
 
 	script.Parent.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer:Kick("Bạn đã bị ban do bị hệ thống <AntiCheat> phát hienj sử dụng phần mềm thứ 3 98 năm 10 ngày")
+		game.Players.LocalPlayer:Kick("Có cái Lồn")
 	end)
 end
 coroutine.wrap(NAUUSS_fake_script)()
