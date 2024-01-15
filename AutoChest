@@ -437,5 +437,3 @@ local function OHZS_fake_script() -- chestui.Auto Farm Chest
 			end
 		end
 	end)
-end
-coroutine.wrap(OHZS_fake_script)()
