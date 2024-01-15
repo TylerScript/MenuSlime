@@ -23,7 +23,6 @@ chestui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 chestui.BackgroundTransparency = 0.300
 chestui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 chestui.BorderSizePixel = 0
-chestui.Draggable = true
 chestui.Position = UDim2.new(0.363530785, 0, 0.33449477, 0)
 chestui.Size = UDim2.new(0, 235, 0, 253)
 
