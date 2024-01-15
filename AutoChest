@@ -65,7 +65,6 @@ garui.Name = "garui"
 garui.Parent = chestui
 
 -- Scripts:
-require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Sliemx Hub!<Color=/>"):Display()
 getgenv().Setting = {
     ["WhiteScreen"] = false,
     ["TimeReset"] = 4.5,
