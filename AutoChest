@@ -65,7 +65,7 @@ garname.Name = "garname"
 garname.Parent = NameUi
 
 -- Scripts:
-require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest SliemtHub!<Color=/>"):Display()
+require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Slimex Hub!<Color=/>"):Display()
 require(game.ReplicatedStorage.Notification).new("<Color=Yellow>https://discord.gg/EDWskkEPBT<Color=/>"):Display()
 getgenv().Setting = {
     ["WhiteScreen"] = false,
