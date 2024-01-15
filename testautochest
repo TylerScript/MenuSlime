@@ -64,7 +64,7 @@ garname.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB
 garname.Name = "garname"
 garname.Parent = NameUi
 -- Scripts:
-require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest SliemtHub!<Color=/>"):Display()
+require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Sliemx Hub!<Color=/>"):Display()
 getgenv().Setting = {
     ["WhiteScreen"] = false,
     ["TimeReset"] = 4.5,
