@@ -1,3 +1,70 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local AutoChest = Instance.new("ScreenGui")
+local chestui = Instance.new("Frame")
+local Conerui = Instance.new("UICorner")
+local garui = Instance.new("UIGradient")
+local ImageLabel = Instance.new("ImageLabel")
+local Conelogo = Instance.new("UICorner")
+local NameUi = Instance.new("TextLabel")
+local garname = Instance.new("UIGradient")
+
+-- Properties:
+
+AutoChest.Name = "AutoChest"
+AutoChest.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+chestui.Name = "chestui"
+chestui.Parent = AutoChest
+chestui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chestui.BackgroundTransparency = 0.300
+chestui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+chestui.BorderSizePixel = 0
+chestui.Position = UDim2.new(0.363530785, 0, 0.33449477, 0)
+chestui.Size = UDim2.new(0, 235, 0, 253)
+
+Conerui.Name = "Conerui"
+Conerui.Parent = chestui
+
+garui.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 220, 208)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(53, 79, 227))}
+garui.Name = "garui"
+garui.Parent = chestui
+
+ImageLabel.Parent = chestui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.285106391, 0, 0.100323714, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://15979828432"
+
+Conelogo.CornerRadius = UDim.new(0, 50)
+Conelogo.Name = "Conelogo"
+Conelogo.Parent = ImageLabel
+
+NameUi.Name = "NameUi"
+NameUi.Parent = chestui
+NameUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameUi.BackgroundTransparency = 1.000
+NameUi.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NameUi.BorderSizePixel = 0
+NameUi.Position = UDim2.new(0.0723404288, 0, 0.530635536, 0)
+NameUi.Size = UDim2.new(0, 200, 0, 50)
+NameUi.Font = Enum.Font.FredokaOne
+NameUi.Text = "SlimeX Chest"
+NameUi.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameUi.TextScaled = true
+NameUi.TextSize = 14.000
+NameUi.TextWrapped = true
+
+garname.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 192)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(219, 158, 255))}
+garname.Name = "garname"
+garname.Parent = NameUi
+
+-- Scripts:
 getgenv().Setting = {
     ["WhiteScreen"] = false,
     ["TimeReset"] = 4.5,
