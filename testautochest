@@ -64,7 +64,7 @@ Beli.BorderSizePixel = 0
 Beli.Position = UDim2.new(0.199999943, 0, 0.630000949, 0)
 Beli.Size = UDim2.new(0, 136, 0, 25)
 Beli.Font = Enum.Font.Gotham
-Beli.Text = game.PlayerGui.path.beli
+Beli.Text = "1"
 Beli.TextColor3 = Color3.fromRGB(75, 238, 6)
 Beli.TextSize = 20.000
 Beli.TextWrapped = true
@@ -86,14 +86,14 @@ Tsbeli.TextWrapped = true
 
 -- Scripts:
 
-local function OZKJDD_fake_script() -- chestui.moveui 
+local function KGMW_fake_script() -- chestui.moveui 
 	local script = Instance.new('LocalScript', chestui)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(OZKJDD_fake_script)()
-local function UBOBM_fake_script() -- chestui.Auto Farm Chest 
+coroutine.wrap(KGMW_fake_script)()
+local function EIQMN_fake_script() -- chestui.Auto Farm Chest 
 	local script = Instance.new('LocalScript', chestui)
 
 	require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Sliemx Hub!<Color=/>"):Display()
@@ -458,4 +458,4 @@ local function UBOBM_fake_script() -- chestui.Auto Farm Chest
 		end
 	end)
 end
-coroutine.wrap(UBOBM_fake_script)()
+coroutine.wrap(EIQMN_fake_script)()
