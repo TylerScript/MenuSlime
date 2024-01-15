@@ -67,14 +67,6 @@ garname.Parent = NameUi
 -- Scripts:
 require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Slimex Hub!<Color=/>"):Display()
 require(game.ReplicatedStorage.Notification).new("<Color=Yellow>https://discord.gg/EDWskkEPBT<Color=/>"):Display()
-getgenv().Setting = {
-    ["WhiteScreen"] = false,
-    ["TimeReset"] = 4.5,
-	["ModFarm"] = {
-		["StopItemLegendary"] = true,
-        ["SummonKillDarkbeard"] = true
-	}
-}
 local p = game.Players
 local lp = p.LocalPlayer
 --- Join Team
