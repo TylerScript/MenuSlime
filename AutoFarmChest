@@ -9,8 +9,8 @@ local Conerui = Instance.new("UICorner")
 local ImageLabel = Instance.new("ImageLabel")
 local Conelogo = Instance.new("UICorner")
 local NameUi = Instance.new("TextLabel")
-local Beli = Instance.new("TextLabel")
-local Tsbeli = Instance.new("TextLabel")
+local garname = Instance.new("UIGradient")
+local garui = Instance.new("UIGradient")
 
 -- Properties:
 
@@ -19,11 +19,12 @@ AutoChest.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 chestui.Name = "chestui"
 chestui.Parent = AutoChest
-chestui.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+chestui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chestui.BackgroundTransparency = 0.300
 chestui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 chestui.BorderSizePixel = 0
-chestui.Position = UDim2.new(0.353972852, 0, 0.269277424, 0)
-chestui.Size = UDim2.new(0, 244, 0, 294)
+chestui.Position = UDim2.new(0.363530785, 0, 0.33449477, 0)
+chestui.Size = UDim2.new(0, 235, 0, 253)
 
 Conerui.Name = "Conerui"
 Conerui.Parent = chestui
@@ -32,7 +33,7 @@ ImageLabel.Parent = chestui
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.272340417, 0, 0.0252248887, 0)
+ImageLabel.Position = UDim2.new(0.285106391, 0, 0.100323714, 0)
 ImageLabel.Size = UDim2.new(0, 100, 0, 100)
 ImageLabel.Image = "rbxassetid://15979828432"
 
@@ -46,54 +47,33 @@ NameUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 NameUi.BackgroundTransparency = 1.000
 NameUi.BorderColor3 = Color3.fromRGB(0, 0, 0)
 NameUi.BorderSizePixel = 0
-NameUi.Position = UDim2.new(0.0723404288, 0, 0.419963598, 0)
-NameUi.Size = UDim2.new(0, 200, 0, 50)
-NameUi.Font = Enum.Font.Gotham
-NameUi.Text = "SlimeX Chest"
+NameUi.Position = UDim2.new(0.0723404288, 0, 0.495062411, 0)
+NameUi.Size = UDim2.new(0, 200, 0, 34)
+NameUi.Font = Enum.Font.FredokaOne
+NameUi.Text = "SlimeX Auto Farm Chest"
 NameUi.TextColor3 = Color3.fromRGB(255, 255, 255)
 NameUi.TextScaled = true
 NameUi.TextSize = 14.000
 NameUi.TextWrapped = true
 
-Beli.Name = "Beli"
-Beli.Parent = chestui
-Beli.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Beli.BackgroundTransparency = 1.000
-Beli.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Beli.BorderSizePixel = 0
-Beli.Position = UDim2.new(0.199999943, 0, 0.630000949, 0)
-Beli.Size = UDim2.new(0, 136, 0, 25)
-Beli.Font = Enum.Font.Gotham
-Beli.Text = "1"
-Beli.TextColor3 = Color3.fromRGB(75, 238, 6)
-Beli.TextSize = 20.000
-Beli.TextWrapped = true
+garname.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(46, 255, 192)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(219, 158, 255))}
+garname.Name = "garname"
+garname.Parent = NameUi
 
-Tsbeli.Name = "Tsbeli"
-Tsbeli.Parent = chestui
-Tsbeli.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tsbeli.BackgroundTransparency = 1.000
-Tsbeli.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tsbeli.BorderSizePixel = 0
-Tsbeli.Position = UDim2.new(0.0723404288, 0, 0.617592096, 0)
-Tsbeli.Size = UDim2.new(0, 84, 0, 29)
-Tsbeli.Font = Enum.Font.Gotham
-Tsbeli.Text = "Money :"
-Tsbeli.TextColor3 = Color3.fromRGB(75, 238, 6)
-Tsbeli.TextScaled = true
-Tsbeli.TextSize = 14.000
-Tsbeli.TextWrapped = true
+garui.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 220, 208)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(53, 79, 227))}
+garui.Name = "garui"
+garui.Parent = chestui
 
 -- Scripts:
 
-local function KGMW_fake_script() -- chestui.moveui 
+local function PKZOYMJ_fake_script() -- chestui.moveui 
 	local script = Instance.new('LocalScript', chestui)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(KGMW_fake_script)()
-local function EIQMN_fake_script() -- chestui.Auto Farm Chest 
+coroutine.wrap(PKZOYMJ_fake_script)()
+local function OHZS_fake_script() -- chestui.Auto Farm Chest 
 	local script = Instance.new('LocalScript', chestui)
 
 	require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Sliemx Hub!<Color=/>"):Display()
@@ -458,4 +438,4 @@ local function EIQMN_fake_script() -- chestui.Auto Farm Chest
 		end
 	end)
 end
-coroutine.wrap(EIQMN_fake_script)()
+coroutine.wrap(OHZS_fake_script)()
