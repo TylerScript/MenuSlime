@@ -148,6 +148,20 @@ Earn.TextSize = 14.000
 Earn.TextWrapped = true
 Earn.TextXAlignment = Enum.TextXAlignment.Left
 
+local old = game:GetService("Players").LocalPlayer.Data.Beli.Value
+local oldTotal = _G.Total
+TotalNew = oldTotal
+spawn(function()
+	while wait() do
+		newbeli = game:GetService("Players").LocalPlayer.Data.Beli.Value - old
+		TotalNew = oldTotal + newbeli
+		Earn.Text = "Earn Beli: "..newbeli
+		total.Text = "Total Beli: "..TotalNew
+		_G.Total = TotalNew
+		saveSettings()
+	end
+end)
+
 Off.Name = "Off"
 Off.Parent = MainChestGui
 Off.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -198,16 +212,33 @@ time.TextSize = 14.000
 time.TextWrapped = true
 time.TextXAlignment = Enum.TextXAlignment.Left
 
+oldtime = _G.Time
+local function updateElapsedTime(startTime)
+    local elapsedTime = os.time() - startTime -- Calculate the elapsed time
+    local hours = math.floor(elapsedTime / 3600)
+    local minutes = math.floor((elapsedTime % 3600) / 60)
+    local seconds = elapsedTime % 60
+
+    time.Text = string.format("Time Elapsed: %dh:%dm:%ds", hours, minutes, seconds) -- Update the TextLabel with the elapsed time
+end
+
+spawn(function()
+    while wait(1) do
+        updateElapsedTime(oldtime)
+		_G.Time = oldtime
+    end
+end)
+
 -- Scripts:
 
-local function DHBROQW_fake_script() -- MainChestGui.MoveMain 
+local function TLSM_fake_script() -- MainChestGui.MoveMain 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(DHBROQW_fake_script)()
-local function EEMWDNR_fake_script() -- MainChestGui.AutoFarmScript 
+coroutine.wrap(TLSM_fake_script)()
+local function INZQHUG_fake_script() -- MainChestGui.AutoFarmScript 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	getgenv().Setting = {
@@ -681,44 +712,8 @@ local function EEMWDNR_fake_script() -- MainChestGui.AutoFarmScript
 		end
 	end)
 end
-coroutine.wrap(EEMWDNR_fake_script)()
-local function DCYCZWU_fake_script() -- total.totalsp 
-	local script = Instance.new('LocalScript', total)
-
-	local old = game:GetService("Players").LocalPlayer.Data.Beli.Value
-	local oldTotal = _G.Total
-	TotalNew = oldTotal
-	spawn(function()
-		while wait() do
-			newbeli = game:GetService("Players").LocalPlayer.Data.Beli.Value - old
-			TotalNew = oldTotal + newbeli
-			Earn.Text = "Earn Beli: "..newbeli
-			total.Text = "Total Beli: "..TotalNew
-			_G.Total = TotalNew
-			saveSettings()
-		end
-	end)
-end
-coroutine.wrap(DCYCZWU_fake_script)()
-local function BBTYNVE_fake_script() -- Earn.earnsp 
-	local script = Instance.new('LocalScript', Earn)
-
-	local old = game:GetService("Players").LocalPlayer.Data.Beli.Value
-	local oldTotal = _G.Total
-	TotalNew = oldTotal
-	spawn(function()
-		while wait() do
-			newbeli = game:GetService("Players").LocalPlayer.Data.Beli.Value - old
-			TotalNew = oldTotal + newbeli
-			Earn.Text = "Earn Beli: "..newbeli
-			total.Text = "Total Beli: "..TotalNew
-			_G.Total = TotalNew
-			saveSettings()
-		end
-	end)
-end
-coroutine.wrap(BBTYNVE_fake_script)()
-local function MMYP_fake_script() -- Off.Off 
+coroutine.wrap(INZQHUG_fake_script)()
+local function FWHIBWN_fake_script() -- Off.Off 
 	local script = Instance.new('LocalScript', Off)
 
 	script.Parent.MouseButton1Click:Connect(function ()
@@ -726,33 +721,12 @@ local function MMYP_fake_script() -- Off.Off
 	end)
 	
 end
-coroutine.wrap(MMYP_fake_script)()
-local function FPKMDY_fake_script() -- On.On 
+coroutine.wrap(FWHIBWN_fake_script)()
+local function RRRCKEC_fake_script() -- On.On 
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function ()
 		AutoFarmChest = true
 	end)
 end
-coroutine.wrap(FPKMDY_fake_script)()
-local function NXZLXPN_fake_script() -- time.timesp 
-	local script = Instance.new('LocalScript', time)
-
-	oldtime = _G.Time
-	local function updateElapsedTime(startTime)
-		local elapsedTime = os.time() - startTime -- Calculate the elapsed time
-		local hours = math.floor(elapsedTime / 3600)
-		local minutes = math.floor((elapsedTime % 3600) / 60)
-		local seconds = elapsedTime % 60
-	
-		time.Text = string.format("Time Elapsed: %dh:%dm:%ds", hours, minutes, seconds) -- Update the TextLabel with the elapsed time
-	end
-	
-	spawn(function()
-		while wait(1) do
-			updateElapsedTime(oldtime)
-			_G.Time = oldtime
-		end
-	end)
-end
-coroutine.wrap(NXZLXPN_fake_script)()
+coroutine.wrap(RRRCKEC_fake_script)()
