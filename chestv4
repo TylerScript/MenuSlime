@@ -3,38 +3,32 @@
 
 -- Instances:
 
-local Chest = Instance.new("ScreenGui")
 local MainChestGui = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Chestimg = Instance.new("ImageLabel")
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local UIStroke = Instance.new("UIStroke")
 local NameMain = Instance.new("TextButton")
 local Robloximg = Instance.new("ImageLabel")
 local OnOff = Instance.new("Frame")
 local Menu = Instance.new("Frame")
 local bbname = Instance.new("TextButton")
-local total = Instance.new("TextLabel")
-local Earn = Instance.new("TextLabel")
 local Off = Instance.new("TextButton")
 local On = Instance.new("TextButton")
-local time = Instance.new("TextLabel")
+local Update = Instance.new("TextButton")
+local Update2 = Instance.new("TextButton")
+local Update3 = Instance.new("TextButton")
 
 -- Properties:
 
-Chest.Name = "Chest"
-Chest.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Chest.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 MainChestGui.Name = "MainChestGui"
-MainChestGui.Parent = Chest
+MainChestGui.Parent = game.StarterGui.Chest
 MainChestGui.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 MainChestGui.BackgroundTransparency = 0.700
 MainChestGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainChestGui.BorderSizePixel = 0
 MainChestGui.ClipsDescendants = true
-MainChestGui.Position = UDim2.new(0, 199, 0, 163)
-MainChestGui.Size = UDim2.new(0, 432, 0, 246)
+MainChestGui.Position = UDim2.new(0, 227, 0, 163)
+MainChestGui.Size = UDim2.new(0, 404, 0, 246)
 
 UICorner.Parent = MainChestGui
 
@@ -44,12 +38,9 @@ Chestimg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Chestimg.BackgroundTransparency = 1.000
 Chestimg.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Chestimg.BorderSizePixel = 0
-Chestimg.Position = UDim2.new(0, 227, 0, 34)
+Chestimg.Position = UDim2.new(0, 202, 0, 40)
 Chestimg.Size = UDim2.new(0, 238, 0, 228)
 Chestimg.Image = "rbxassetid://16001572935"
-
-UIAspectRatioConstraint.Parent = Chestimg
-UIAspectRatioConstraint.AspectRatio = 1.044
 
 UIStroke.Transparency = 0.8999999761581421
 UIStroke.Parent = MainChestGui
@@ -116,59 +107,13 @@ bbname.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 bbname.TextWrapped = true
 bbname.TextXAlignment = Enum.TextXAlignment.Left
 
-total.Name = "total"
-total.Parent = MainChestGui
-total.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-total.BackgroundTransparency = 1.000
-total.BorderColor3 = Color3.fromRGB(0, 0, 0)
-total.BorderSizePixel = 0
-total.Position = UDim2.new(0.0300925933, 0, 0.284552842, 0)
-total.Size = UDim2.new(0, 231, 0, 16)
-total.Font = Enum.Font.Gotham
-total.Text = "Total Beli:"
-total.TextColor3 = Color3.fromRGB(255, 255, 255)
-total.TextScaled = true
-total.TextSize = 14.000
-total.TextWrapped = true
-total.TextXAlignment = Enum.TextXAlignment.Left
-
-Earn.Name = "Earn"
-Earn.Parent = MainChestGui
-Earn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Earn.BackgroundTransparency = 1.000
-Earn.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Earn.BorderSizePixel = 0
-Earn.Position = UDim2.new(0.0300925933, 0, 0.402439028, 0)
-Earn.Size = UDim2.new(0, 231, 0, 16)
-Earn.Font = Enum.Font.Gotham
-Earn.Text = "Earn Beli:"
-Earn.TextColor3 = Color3.fromRGB(255, 255, 255)
-Earn.TextScaled = true
-Earn.TextSize = 14.000
-Earn.TextWrapped = true
-Earn.TextXAlignment = Enum.TextXAlignment.Left
-
-local old = game:GetService("Players").LocalPlayer.Data.Beli.Value
-local oldTotal = _G.Total
-TotalNew = oldTotal
-spawn(function()
-	while wait() do
-		newbeli = game:GetService("Players").LocalPlayer.Data.Beli.Value - old
-		TotalNew = oldTotal + newbeli
-		Earn.Text = "Earn Beli: "..newbeli
-		total.Text = "Total Beli: "..TotalNew
-		_G.Total = TotalNew
-		saveSettings()
-	end
-end)
-
 Off.Name = "Off"
 Off.Parent = MainChestGui
 Off.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Off.BackgroundTransparency = 1.000
 Off.BorderColor3 = Color3.fromRGB(255, 255, 255)
 Off.BorderSizePixel = 0
-Off.Position = UDim2.new(0, 373, 0, 207)
+Off.Position = UDim2.new(0, 305, 0, 208)
 Off.Size = UDim2.new(0, 32, 0, 19)
 Off.Font = Enum.Font.Gotham
 Off.Text = "Off"
@@ -185,7 +130,7 @@ On.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 On.BackgroundTransparency = 1.000
 On.BorderColor3 = Color3.fromRGB(255, 255, 255)
 On.BorderSizePixel = 0
-On.Position = UDim2.new(0, 330, 0, 207)
+On.Position = UDim2.new(0, 250, 0, 207)
 On.Size = UDim2.new(0, 30, 0, 19)
 On.Font = Enum.Font.Gotham
 On.Text = "On"
@@ -196,49 +141,67 @@ On.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 On.TextWrapped = true
 On.TextXAlignment = Enum.TextXAlignment.Left
 
-time.Name = "time"
-time.Parent = MainChestGui
-time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-time.BackgroundTransparency = 1.000
-time.BorderColor3 = Color3.fromRGB(0, 0, 0)
-time.BorderSizePixel = 0
-time.Position = UDim2.new(0.0300925933, 0, 0.520325184, 0)
-time.Size = UDim2.new(0, 231, 0, 16)
-time.Font = Enum.Font.Gotham
-time.Text = "Time Elapsed:"
-time.TextColor3 = Color3.fromRGB(255, 255, 255)
-time.TextScaled = true
-time.TextSize = 14.000
-time.TextWrapped = true
-time.TextXAlignment = Enum.TextXAlignment.Left
+Update.Name = "Update"
+Update.Parent = MainChestGui
+Update.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update.BackgroundTransparency = 1.000
+Update.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Update.BorderSizePixel = 0
+Update.Position = UDim2.new(0, 13, 0, 68)
+Update.Size = UDim2.new(0, 200, 0, 19)
+Update.Font = Enum.Font.Gotham
+Update.Text = "+ Fix Lag Hop Server"
+Update.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update.TextScaled = true
+Update.TextSize = 14.000
+Update.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Update.TextWrapped = true
+Update.TextXAlignment = Enum.TextXAlignment.Left
 
-oldtime = _G.Time
-local function updateElapsedTime(startTime)
-    local elapsedTime = os.time() - startTime -- Calculate the elapsed time
-    local hours = math.floor(elapsedTime / 3600)
-    local minutes = math.floor((elapsedTime % 3600) / 60)
-    local seconds = elapsedTime % 60
+Update2.Name = "Update2"
+Update2.Parent = MainChestGui
+Update2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update2.BackgroundTransparency = 1.000
+Update2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Update2.BorderSizePixel = 0
+Update2.Position = UDim2.new(0, 13, 0, 96)
+Update2.Size = UDim2.new(0, 200, 0, 19)
+Update2.Font = Enum.Font.Gotham
+Update2.Text = "+ Auto farm Fast"
+Update2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update2.TextScaled = true
+Update2.TextSize = 14.000
+Update2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Update2.TextWrapped = true
+Update2.TextXAlignment = Enum.TextXAlignment.Left
 
-    time.Text = string.format("Time Elapsed: %dh:%dm:%ds", hours, minutes, seconds) -- Update the TextLabel with the elapsed time
-end
-
-spawn(function()
-    while wait(1) do
-        updateElapsedTime(oldtime)
-		_G.Time = oldtime
-    end
-end)
+Update3.Name = "Update3"
+Update3.Parent = MainChestGui
+Update3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update3.BackgroundTransparency = 1.000
+Update3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Update3.BorderSizePixel = 0
+Update3.Position = UDim2.new(0, 13, 0, 124)
+Update3.Size = UDim2.new(0, 200, 0, 19)
+Update3.Font = Enum.Font.Gotham
+Update3.Text = "+ Kill Dark Beard"
+Update3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update3.TextScaled = true
+Update3.TextSize = 14.000
+Update3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Update3.TextWrapped = true
+Update3.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function TLSM_fake_script() -- MainChestGui.MoveMain 
+local function QHPU_fake_script() -- MainChestGui.MoveMain 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(TLSM_fake_script)()
-local function INZQHUG_fake_script() -- MainChestGui.AutoFarmScript 
+coroutine.wrap(QHPU_fake_script)()
+local function FLLXLCR_fake_script() -- MainChestGui.AutoFarmScript 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	getgenv().Setting = {
@@ -712,8 +675,8 @@ local function INZQHUG_fake_script() -- MainChestGui.AutoFarmScript
 		end
 	end)
 end
-coroutine.wrap(INZQHUG_fake_script)()
-local function FWHIBWN_fake_script() -- Off.Off 
+coroutine.wrap(FLLXLCR_fake_script)()
+local function EEMISQK_fake_script() -- Off.Off 
 	local script = Instance.new('LocalScript', Off)
 
 	script.Parent.MouseButton1Click:Connect(function ()
@@ -721,12 +684,12 @@ local function FWHIBWN_fake_script() -- Off.Off
 	end)
 	
 end
-coroutine.wrap(FWHIBWN_fake_script)()
-local function RRRCKEC_fake_script() -- On.On 
+coroutine.wrap(EEMISQK_fake_script)()
+local function RKFYZ_fake_script() -- On.On 
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function ()
 		AutoFarmChest = true
 	end)
 end
-coroutine.wrap(RRRCKEC_fake_script)()
+coroutine.wrap(RKFYZ_fake_script)()
