@@ -4,158 +4,259 @@
 -- Instances:
 
 local Menu = Instance.new("ScreenGui")
-local Framemenu = Instance.new("Frame")
-local framecn = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local Color1 = Instance.new("UIGradient")
-local Colorfarm = Instance.new("UIGradient")
-local Exit = Instance.new("TextButton")
-local UIGradient = Instance.new("UIGradient")
-local Menuscripts = Instance.new("ScrollingFrame")
-local bloxfruit = Instance.new("Frame")
-local conblox = Instance.new("UICorner")
-local clbloxfr = Instance.new("UIGradient")
-local imgbloxfr = Instance.new("ImageLabel")
-local imgcnbloxfr = Instance.new("UICorner")
-local srpblox = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local name = Instance.new("TextLabel")
+local discrodimg = Instance.new("ImageButton")
+local exit = Instance.new("ImageButton")
+local bxfruit = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local bxlick = Instance.new("ImageButton")
+local Shadown = Instance.new("Frame")
+local bxname = Instance.new("TextButton")
+local Distobx = Instance.new("TextButton")
+local imgbx = Instance.new("ImageLabel")
+local bb = Instance.new("Frame")
+local Bbimg = Instance.new("ImageLabel")
+local bbblick = Instance.new("ImageButton")
+local Shadown_2 = Instance.new("Frame")
+local UIStroke_2 = Instance.new("UIStroke")
+local UICorner_2 = Instance.new("UICorner")
+local Distobb = Instance.new("TextButton")
+local bbname = Instance.new("TextButton")
 
 -- Properties:
 
 Menu.Name = "Menu"
 Menu.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Menu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Framemenu.Name = "Framemenu"
-Framemenu.Parent = Menu
-Framemenu.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
-Framemenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Framemenu.BorderSizePixel = 0
-Framemenu.Position = UDim2.new(0.250185728, 0, 0.318172485, 0)
-Framemenu.Size = UDim2.new(0, 430, 0, 244)
+Main.Name = "Main"
+Main.Parent = Menu
+Main.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Main.BackgroundTransparency = 0.900
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0, 0, 0, -5)
+Main.Size = UDim2.new(0, 834, 0, 49)
 
-framecn.Name = "framecn"
-framecn.Parent = Framemenu
+name.Name = "name"
+name.Parent = Main
+name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+name.BackgroundTransparency = 1.000
+name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+name.BorderSizePixel = 0
+name.Position = UDim2.new(0, 295, 0, 14)
+name.Size = UDim2.new(0, 199, 0, 20)
+name.Font = Enum.Font.Gotham
+name.Text = "SlimeX Menu"
+name.TextColor3 = Color3.fromRGB(255, 255, 255)
+name.TextScaled = true
+name.TextSize = 14.000
+name.TextWrapped = true
 
-TextLabel.Parent = Framemenu
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0325581394, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 151, 0, 39)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "SlimeX Menu"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+discrodimg.Name = "discrodimg"
+discrodimg.Parent = Main
+discrodimg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+discrodimg.BackgroundTransparency = 1.000
+discrodimg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+discrodimg.BorderSizePixel = 0
+discrodimg.Position = UDim2.new(0, 60, 0, 10)
+discrodimg.Size = UDim2.new(0, 30, 0, 29)
+discrodimg.Image = "rbxassetid://16014654352"
 
-Color1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(87, 255, 230)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-Color1.Name = "Color1"
-Color1.Parent = TextLabel
+exit.Name = "exit"
+exit.Parent = Main
+exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+exit.BackgroundTransparency = 1.000
+exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.0203836933, 0, 0.183673471, 0)
+exit.Size = UDim2.new(0, 30, 0, 30)
+exit.Image = "rbxassetid://16001663992"
 
-Colorfarm.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(22, 22, 22)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-Colorfarm.Name = "Colorfarm"
-Colorfarm.Parent = Framemenu
+bxfruit.Name = "bxfruit"
+bxfruit.Parent = Main
+bxfruit.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+bxfruit.BackgroundTransparency = 0.700
+bxfruit.BorderColor3 = Color3.fromRGB(255, 255, 255)
+bxfruit.BorderSizePixel = 0
+bxfruit.ClipsDescendants = true
+bxfruit.Position = UDim2.new(0, 376, 0, 97)
+bxfruit.Size = UDim2.new(0, 308, 0, 223)
 
-Exit.Name = "Exit"
-Exit.Parent = Framemenu
-Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Exit.BackgroundTransparency = 1.000
-Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Exit.BorderSizePixel = 0
-Exit.Position = UDim2.new(0.727907002, 0, -0.0245901644, 0)
-Exit.Size = UDim2.new(0, 200, 0, 50)
-Exit.Font = Enum.Font.FredokaOne
-Exit.Text = "x"
-Exit.TextColor3 = Color3.fromRGB(243, 243, 243)
-Exit.TextScaled = true
-Exit.TextSize = 14.000
-Exit.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Exit.TextWrapped = true
+UICorner.Parent = bxfruit
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 16, 20)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
-UIGradient.Parent = Exit
+UIStroke.Transparency = 0.8999999761581421
+UIStroke.Parent = bxfruit
 
-Menuscripts.Name = "Menuscripts"
-Menuscripts.Parent = Framemenu
-Menuscripts.Active = true
-Menuscripts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Menuscripts.BackgroundTransparency = 1.000
-Menuscripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Menuscripts.BorderSizePixel = 0
-Menuscripts.Position = UDim2.new(0, 0, 0.159836069, 0)
-Menuscripts.Size = UDim2.new(0, 430, 0, 195)
-Menuscripts.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+bxlick.Name = "bxlick"
+bxlick.Parent = bxfruit
+bxlick.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bxlick.BackgroundTransparency = 1.000
+bxlick.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bxlick.BorderSizePixel = 0
+bxlick.Size = UDim2.new(0, 308, 0, 222)
+bxlick.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+bxlick.ImageTransparency = 1.000
 
-bloxfruit.Name = "bloxfruit"
-bloxfruit.Parent = Menuscripts
-bloxfruit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-bloxfruit.BorderColor3 = Color3.fromRGB(255, 255, 255)
-bloxfruit.BorderSizePixel = 0
-bloxfruit.Position = UDim2.new(0.0325581394, 0, 0, 0)
-bloxfruit.Size = UDim2.new(0, 123, 0, 119)
+Shadown.Name = "Shadown"
+Shadown.Parent = bxfruit
+Shadown.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Shadown.BackgroundTransparency = 0.600
+Shadown.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shadown.BorderSizePixel = 0
+Shadown.Position = UDim2.new(0, 0, 0, 173)
+Shadown.Size = UDim2.new(0, 308, 0, 53)
 
-conblox.Name = "conblox"
-conblox.Parent = bloxfruit
+bxname.Name = "bxname"
+bxname.Parent = bxfruit
+bxname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bxname.BackgroundTransparency = 1.000
+bxname.BorderColor3 = Color3.fromRGB(255, 255, 255)
+bxname.BorderSizePixel = 0
+bxname.Position = UDim2.new(0, 7, 0, 182)
+bxname.Size = UDim2.new(0, 199, 0, 17)
+bxname.Font = Enum.Font.Gotham
+bxname.Text = "Blox Fruits"
+bxname.TextColor3 = Color3.fromRGB(255, 255, 255)
+bxname.TextScaled = true
+bxname.TextSize = 14.000
+bxname.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+bxname.TextWrapped = true
+bxname.TextXAlignment = Enum.TextXAlignment.Left
 
-clbloxfr.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(23, 255, 209)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(39, 143, 255))}
-clbloxfr.Name = "clbloxfr"
-clbloxfr.Parent = bloxfruit
+Distobx.Name = "Distobx"
+Distobx.Parent = bxfruit
+Distobx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Distobx.BackgroundTransparency = 1.000
+Distobx.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Distobx.BorderSizePixel = 0
+Distobx.Position = UDim2.new(0, 7, 0, 204)
+Distobx.Size = UDim2.new(0, 199, 0, 10)
+Distobx.Font = Enum.Font.Gotham
+Distobx.Text = "Now Play Blox Fruits"
+Distobx.TextColor3 = Color3.fromRGB(255, 255, 255)
+Distobx.TextScaled = true
+Distobx.TextSize = 14.000
+Distobx.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Distobx.TextWrapped = true
+Distobx.TextXAlignment = Enum.TextXAlignment.Left
 
-imgbloxfr.Name = "imgbloxfr"
-imgbloxfr.Parent = bloxfruit
-imgbloxfr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-imgbloxfr.BorderColor3 = Color3.fromRGB(0, 0, 0)
-imgbloxfr.BorderSizePixel = 0
-imgbloxfr.Position = UDim2.new(0.178861782, 0, 0.0924369767, 0)
-imgbloxfr.Size = UDim2.new(0, 78, 0, 74)
-imgbloxfr.Image = "http://www.roblox.com/asset/?id=12538375807"
+imgbx.Name = "imgbx"
+imgbx.Parent = bxfruit
+imgbx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+imgbx.BackgroundTransparency = 1.000
+imgbx.BorderColor3 = Color3.fromRGB(0, 0, 0)
+imgbx.BorderSizePixel = 0
+imgbx.Position = UDim2.new(0, 29, 0, 4)
+imgbx.Size = UDim2.new(0, 243, 0, 160)
+imgbx.Image = "rbxassetid://16003216262"
 
-imgcnbloxfr.CornerRadius = UDim.new(0, 50)
-imgcnbloxfr.Name = "imgcnbloxfr"
-imgcnbloxfr.Parent = imgbloxfr
+bb.Name = "bb"
+bb.Parent = Main
+bb.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+bb.BackgroundTransparency = 0.700
+bb.BorderColor3 = Color3.fromRGB(255, 255, 255)
+bb.BorderSizePixel = 0
+bb.ClipsDescendants = true
+bb.Position = UDim2.new(0, 17, 0, 97)
+bb.Size = UDim2.new(0, 308, 0, 223)
 
-srpblox.Name = "srpblox"
-srpblox.Parent = bloxfruit
-srpblox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-srpblox.BackgroundTransparency = 1.000
-srpblox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-srpblox.BorderSizePixel = 0
-srpblox.Position = UDim2.new(0.08130081, 0, 0.714285731, 0)
-srpblox.Size = UDim2.new(0, 106, 0, 31)
-srpblox.Font = Enum.Font.FredokaOne
-srpblox.Text = "Blox Fruit"
-srpblox.TextColor3 = Color3.fromRGB(255, 255, 255)
-srpblox.TextScaled = true
-srpblox.TextSize = 14.000
-srpblox.TextWrapped = true
+Bbimg.Name = "Bbimg"
+Bbimg.Parent = bb
+Bbimg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bbimg.BackgroundTransparency = 1.000
+Bbimg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bbimg.BorderSizePixel = 0
+Bbimg.Position = UDim2.new(0, -66, 0, -11)
+Bbimg.Size = UDim2.new(0, 483, 0, 296)
+Bbimg.Image = "rbxassetid://15994091428"
+
+bbblick.Name = "bbblick"
+bbblick.Parent = bb
+bbblick.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bbblick.BackgroundTransparency = 1.000
+bbblick.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bbblick.BorderSizePixel = 0
+bbblick.Size = UDim2.new(0, 308, 0, 222)
+bbblick.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+bbblick.ImageTransparency = 1.000
+
+Shadown_2.Name = "Shadown"
+Shadown_2.Parent = bb
+Shadown_2.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Shadown_2.BackgroundTransparency = 0.600
+Shadown_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shadown_2.BorderSizePixel = 0
+Shadown_2.Position = UDim2.new(0, 0, 0, 172)
+Shadown_2.Size = UDim2.new(0, 308, 0, 53)
+
+UIStroke_2.Transparency = 0.8999999761581421
+UIStroke_2.Parent = bb
+
+UICorner_2.Parent = bb
+
+Distobb.Name = "Distobb"
+Distobb.Parent = bb
+Distobb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Distobb.BackgroundTransparency = 1.000
+Distobb.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Distobb.BorderSizePixel = 0
+Distobb.Position = UDim2.new(0, 7, 0, 204)
+Distobb.Size = UDim2.new(0, 199, 0, 10)
+Distobb.Font = Enum.Font.Gotham
+Distobb.Text = "Now Play Blade Ball"
+Distobb.TextColor3 = Color3.fromRGB(255, 255, 255)
+Distobb.TextScaled = true
+Distobb.TextSize = 14.000
+Distobb.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Distobb.TextWrapped = true
+Distobb.TextXAlignment = Enum.TextXAlignment.Left
+
+bbname.Name = "bbname"
+bbname.Parent = bb
+bbname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bbname.BackgroundTransparency = 1.000
+bbname.BorderColor3 = Color3.fromRGB(255, 255, 255)
+bbname.BorderSizePixel = 0
+bbname.Position = UDim2.new(0, 7, 0, 182)
+bbname.Size = UDim2.new(0, 199, 0, 17)
+bbname.Font = Enum.Font.Gotham
+bbname.Text = "Blade Ball"
+bbname.TextColor3 = Color3.fromRGB(255, 255, 255)
+bbname.TextScaled = true
+bbname.TextSize = 14.000
+bbname.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+bbname.TextWrapped = true
+bbname.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function JDXZGT_fake_script() -- Exit.close 
-	local script = Instance.new('LocalScript', Exit)
+local function SRYLISI_fake_script() -- discrodimg.discrod 
+	local script = Instance.new('LocalScript', discrodimg)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		setclipboard("https://discord.gg/hWrKvbMrVF")
+	end)
+end
+coroutine.wrap(SRYLISI_fake_script)()
+local function QVUKIU_fake_script() -- exit.exitsp 
+	local script = Instance.new('LocalScript', exit)
 
 	local frame = script.Parent.Parent
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		frame.Visible = false
 	end)
-	
 end
-coroutine.wrap(JDXZGT_fake_script)()
-local function KEJJ_fake_script() -- srpblox.scrloadblox 
-	local script = Instance.new('LocalScript', srpblox)
+coroutine.wrap(QVUKIU_fake_script)()
+local function PJQLPZP_fake_script() -- bxlick.scriptsbx 
+	local script = Instance.new('LocalScript', bxlick)
 
-	
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/Slimexhub/main/Slimex-hub"))()
 	end)
+	
 end
-coroutine.wrap(KEJJ_fake_script)()
-local function SJILER_fake_script() -- Framemenu.movemenu 
-	local script = Instance.new('LocalScript', Framemenu)
-
-	script.Parent.Draggable = true
-	script.Parent.Active = true
-end
-coroutine.wrap(SJILER_fake_script)()
+coroutine.wrap(PJQLPZP_fake_script)()
