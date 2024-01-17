@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
 local Chest = Instance.new("ScreenGui")
 local MainChestGui = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -10,6 +15,9 @@ local Menu = Instance.new("Frame")
 local bbname = Instance.new("TextButton")
 local Off = Instance.new("TextButton")
 local On = Instance.new("TextButton")
+local update = Instance.new("TextLabel")
+local update2c = Instance.new("TextLabel")
+local fatsupdate = Instance.new("TextLabel")
 
 -- Properties:
 
@@ -138,155 +146,121 @@ On.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 On.TextWrapped = true
 On.TextXAlignment = Enum.TextXAlignment.Left
 
+update.Name = "update"
+update.Parent = MainChestGui
+update.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+update.BackgroundTransparency = 1.000
+update.BorderColor3 = Color3.fromRGB(0, 0, 0)
+update.BorderSizePixel = 0
+update.Position = UDim2.new(0.0321782194, 0, 0.239837393, 0)
+update.Size = UDim2.new(0, 200, 0, 21)
+update.Font = Enum.Font.Gotham
+update.Text = "+ Summon Kill Darkbeard"
+update.TextColor3 = Color3.fromRGB(255, 255, 255)
+update.TextScaled = true
+update.TextSize = 14.000
+update.TextWrapped = true
+update.TextXAlignment = Enum.TextXAlignment.Left
+
+update2c.Name = "update2c"
+update2c.Parent = MainChestGui
+update2c.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+update2c.BackgroundTransparency = 1.000
+update2c.BorderColor3 = Color3.fromRGB(0, 0, 0)
+update2c.BorderSizePixel = 0
+update2c.Position = UDim2.new(0.0321782194, 0, 0.34959349, 0)
+update2c.Size = UDim2.new(0, 200, 0, 18)
+update2c.Font = Enum.Font.Gotham
+update2c.Text = "+ Fix Lag"
+update2c.TextColor3 = Color3.fromRGB(255, 255, 255)
+update2c.TextScaled = true
+update2c.TextSize = 14.000
+update2c.TextWrapped = true
+update2c.TextXAlignment = Enum.TextXAlignment.Left
+
+fatsupdate.Name = "fatsupdate"
+fatsupdate.Parent = MainChestGui
+fatsupdate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fatsupdate.BackgroundTransparency = 1.000
+fatsupdate.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fatsupdate.BorderSizePixel = 0
+fatsupdate.Position = UDim2.new(0.0321782194, 0, 0.463414639, 0)
+fatsupdate.Size = UDim2.new(0, 200, 0, 18)
+fatsupdate.Font = Enum.Font.Gotham
+fatsupdate.Text = "+ Collect Chest Fast"
+fatsupdate.TextColor3 = Color3.fromRGB(255, 255, 255)
+fatsupdate.TextScaled = true
+fatsupdate.TextSize = 14.000
+fatsupdate.TextWrapped = true
+fatsupdate.TextXAlignment = Enum.TextXAlignment.Left
+
 -- Scripts:
 
-local function AESCFZ_fake_script() -- MainChestGui.AutoFarmScript 
+local function RSNYB_fake_script() -- MainChestGui.AutoFarmScript 
 	local script = Instance.new('LocalScript', MainChestGui)
 
+	require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Slimex Hub!<Color=/>"):Display()
+	require(game.ReplicatedStorage.Notification).new("<Color=Yellow>https://discord.gg/EDWskkEPBT<Color=/>"):Display()
 	getgenv().Setting = {
-		["Team"] = "Marines", -- Start With Team Pirates, Marines
-		["WhiteScreen"] = false, -- White Screen
-		["FpsBoost"] = false, -- Fps Boost
-		["AutoRejoin"] = true, -- AutoRejoin
-		["TimeReset"] = 2, -- Time Reset Character
-		["ModeFarm"] = {
-			["StopItemLegendary"] = true, -- Stop Item Legendary
-			["SummonKillDarkbeard"] = true -- Summon And Kill Dark Beard
-		},
+		["WhiteScreen"] = false,
+		["TimeReset"] = 4.5,
+		["ModFarm"] = {
+			["StopItemLegendary"] = true,
+			["SummonKillDarkbeard"] = true
+		}
 	}
-	--// HIRIMI SOURCE - AUTO CHEST - HIRIMI HUB \\--
-	
-	--// White Screen
-	if getgenv().Setting.WhiteScreen == true then
-		game:GetService("RunService"):Set3dRenderingEnabled(false)
-	elseif getgenv().Setting.WhiteScreen == false then
-		game:GetService("RunService"):Set3dRenderingEnabled(true)
-	end
-	
-	--// Fps Boost
-	if getgenv().Setting.FpsBoost == true then
-		pcall(function()
-			game:GetService("Lighting").FantasySky:Destroy()
-			local g = game
-			local w = g.Workspace
-			local l = g.Lighting
-			local t = w.Terrain
-			t.WaterWaveSize = 0
-			t.WaterWaveSpeed = 0
-			t.WaterReflectance = 0
-			t.WaterTransparency = 0
-			l.GlobalShadows = false
-			l.FogEnd = 9e9
-			l.Brightness = 0
-			settings().Rendering.QualityLevel = "Level01"
-			for i, v in pairs(g:GetDescendants()) do
-				if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then 
-					v.Material = "Plastic"
-					v.Reflectance = 0
-				elseif v:IsA("Decal") or v:IsA("Texture") then
-					v.Transparency = 1
-				elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-					v.Lifetime = NumberRange.new(0)
-				elseif v:IsA("Explosion") then
-					v.BlastPressure = 1
-					v.BlastRadius = 1
-				elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-					v.Enabled = false
-				elseif v:IsA("MeshPart") then
-					v.Material = "Plastic"
-					v.Reflectance = 0
-					v.TextureID = 10385902758728957
-				end
-			end
-			for i, e in pairs(l:GetChildren()) do
-				if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
-					e.Enabled = false
-				end
-			end
-			for i, v in pairs(game:GetService("Workspace").Camera:GetDescendants()) do
-				if v.Name == ("Water;") then
-					v.Transparency = 1
-					v.Material = "Plastic"
-				end
-			end
-		end)
-	end
-	
-	
-	--// Start Team
-	repeat wait() until game.Players
-	repeat wait() until game.Players.LocalPlayer
-	repeat wait() until game.ReplicatedStorage
-	repeat wait() until game.ReplicatedStorage:FindFirstChild("Remotes");
-	repeat wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui");
-	repeat wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
-	repeat wait() until game:GetService("Players")
-	repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("Energy")
-	if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
-	--Team
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/MenuSlime/main/chestv4"))() 
+	local p = game.Players
+	local lp = p.LocalPlayer
+	--- Join Team
 	if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
 		repeat wait()
-			if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
-				if getgenv().Setting.Team == "Pirates" or getgenv().Setting.Team == nil then
-					for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
-						v.Function()
+			if getgenv().Setting.ModFarm.StopItemLegendary or getgenv().Setting.ModFarm.SummonKillDarkbeard then
+				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container["Pirates"].Frame.TextButton.Activated)) do
+					for a, b in pairs(getconnections(game:GetService("UserInputService").TouchTapInWorld)) do
+						b:Fire() 
 					end
-				elseif getgenv().Setting.Team == "Marines" then
-					for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
-						v.Function()
-					end
-				else
-					for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
-						v.Function()
-					end
-				end
+					v.Function()
+				end 
+			else
+				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Pirates")
 			end
 		until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 	end
-	
-	--// Farm Chest [Main]
+	wait(0.5)
+	game:GetService("RunService"):Set3dRenderingEnabled(not getgenv().Setting.WhiteScreen)
 	AutoFarmChest = true
 	spawn(function()
-		while true do 
+		while task.wait() do 
 			if AutoFarmChest then
-				for i,v in pairs(game:GetService("Workspace"):GetChildren()) do 
-					if v.Name:find("Chest") then
-						if (game:GetService("Workspace"):FindFirstChild(v.Name)) then
-							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-							if string.find(v.Name, "Chest") and v:IsA("TouchTransmitter") then
-								firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-							end
-						end
-					end
-					if not (game:GetService("Workspace"):FindFirstChild("Chest1") or game:GetService("Workspace"):FindFirstChild("Chest2") or game:GetService("Workspace"):FindFirstChild("Chest3")) then 
-						starthop = true
-					end
+				local Chest = game.Workspace:FindFirstChild("Chest4") or game.Workspace:FindFirstChild("Chest3") or game.Workspace:FindFirstChild("Chest2")
+				if Chest then
+					game.Players.LocalPlayer.Character:PivotTo(Chest:GetPivot())
+					firesignal(Chest.Touched,game.Players.LocalPlayer.Character.HumanoidRootPart)
+				else
+					hopserver = true
+					AutoFarmChest = false
 				end
 			end
-			task.wait()
 		end
 	end)
 	spawn(function()
-		while true do 
+		while task.wait() do 
 			if AutoFarmChest and game:GetService("Players").LocalPlayer.Character:FindFirstChild("Head") then
 				wait(getgenv().Setting.TimeReset)
-				if getgenv().Setting.Team == "Pirates" or getgenv().Setting.Team == nil then
+				if (getgenv().Setting.ModFarm.StopItemLegendary or getgenv().Setting.ModFarm.SummonKillDarkbeard) and game.Players.LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") or game.Players.LocalPlayer.Character:FindFirstChild("Fist of Darkness") or game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
+					AutoFarmChest = false
+				else
 					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Pirates")
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Marines")
-				elseif getgenv().Setting.Team == "Marines" then
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Marines")
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Pirates")
-				end
+				end   
 			end
-			task.wait()
 		end
 	end)
 	spawn(function()
-		while true do
-			if starthop then
+		while task.wait()do
+			if hopserver then
 				HopServer()
 			end
-			wait()
 		end
 	end)
 	function HopServer(bO)
@@ -342,98 +316,14 @@ local function AESCFZ_fake_script() -- MainChestGui.AutoFarmScript
 			getgenv().Loaded = true
 		end
 		while not Hop() do
-			wait()
+			task.wait()
 		end
 	end
-	
-	--// Stop With Strange Item
-	spawn(function()
-		while wait() do
-			if getgenv().Setting.ModeFarm.StopItemLegendary == true then
-				if game.Players.LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") or game.Players.LocalPlayer.Character:FindFirstChild("Fist of Darkness") or game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
-					AutoFarmChest = false
-				end
-			end
+	game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+		if not hopserver and child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
+			game:GetService("TeleportService"):Teleport(game.PlaceId)
 		end
 	end)
-	
-	--// Function Tween
-	function topos(Pos)
-		Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-		if Distance < 25 then
-			Speed = 5000
-		elseif Distance < 50 then
-			Speed = 2000
-		elseif Distance < 150 then
-			Speed = 800
-		elseif Distance < 250 then
-			Speed = 600
-		elseif Distance < 500 then
-			Speed = 300
-		elseif Distance < 750 then
-			Speed = 250
-		elseif Distance >= 1000 then
-			Speed = 200
-		end
-		game:GetService("TweenService"):Create(
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-		TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-		{CFrame = Pos}
-		):Play()
-	end
-	
-	--// EquipTool
-	local function equipToolByToolTip(toolToolTip)
-		for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-			if v:IsA("Tool") and v.ToolTip == toolToolTip then
-				game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
-				break
-			end
-		end
-	end
-	
-	--// Equip Weapon
-	function EquipWeapon(ToolSe)
-		if not _G.NotAutoEquip then
-			if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) then
-				Tool = game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe)
-				wait(.1)
-				game.Players.LocalPlayer.Character.Humanoid:EquipTool(Tool)
-			end
-		end
-	end
-	
-	--// Save Setting
-	local foldername = "Hirimii Hub Auto Chest"
-	local filename = foldername.."/Counter.json"
-	
-	function saveSettings()
-		local HttpService = game:GetService("HttpService")
-		local json = HttpService:JSONEncode(_G)
-		if true then
-			if isfolder(foldername) then
-				if isfile(filename) then
-					writefile(filename, json)
-				else
-					writefile(filename, json)
-				end
-			else
-				makefolder(foldername)
-			end
-		end
-	end
-	
-	function loadSettings()
-		local HttpService = game:GetService("HttpService")
-		if isfolder(foldername) then
-			if isfile(filename) then
-				_G = HttpService:JSONDecode(readfile(filename))
-			end
-		end
-	end
-	_G.Total = 0
-	_G.Time = os.time()
-	loadSettings()
 	--// Fast Attack
 	local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
 	CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
@@ -469,7 +359,7 @@ local function AESCFZ_fake_script() -- MainChestGui.AutoFarmScript
 			end
 		end)
 	end)
-	
+	--- Fast Attack
 	local CurveFrame = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts:WaitForChild("CombatFramework")))[2]
 	local VirtualUser = game:GetService("VirtualUser")
 	local RigControllerR = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.RigController))[2]
@@ -580,43 +470,102 @@ local function AESCFZ_fake_script() -- MainChestGui.AutoFarmScript
 			end
 		end
 	end
-	
+	--// Equip 
+	function equip(tooltip)
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:wait()
+		for _, item in pairs(player.Backpack:GetChildren()) do
+			if item:IsA("Tool") and item.ToolTip == tooltip then
+				local humanoid = character:FindFirstChildOfClass("Humanoid")
+				if humanoid and not humanoid:IsDescendantOf(item) then
+					game.Players.LocalPlayer.Character.Humanoid:EquipTool(item)
+					return true
+				end
+			end
+		end
+		return false
+	end
+	--// Tween
+	function to(Pos)
+		pcall(function()
+			if lp.Character:FindFirstChild("HumanoidRootPart") and lp.Character:FindFirstChild("Humanoid").Health > 0 then
+				Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+				if not game.Players.LocalPlayer.Character.PrimaryPart:FindFirstChild("Hold") then
+					local Hold = Instance.new("BodyVelocity", game.Players.LocalPlayer.Character.PrimaryPart)
+					Hold.Name = "Hold"
+					Hold.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+					Hold.Velocity = Vector3.new(0, 0, 0)
+				end
+				if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+					game.Players.LocalPlayer.Character.Humanoid.Sit = false
+				end
+				local mul = 0.87
+				if Distance < 250 then
+					lp.Character.HumanoidRootPart.CFrame = Pos
+				elseif Distance < 500 then
+					Speed = 400
+				elseif Distance < 1000 then
+					Speed = 375
+				elseif Distance >= 1000 then
+					Speed = 350
+				end
+				pcall(function()
+					tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance / Speed, Enum.EasingStyle.Linear),{CFrame = Pos})
+					tween:Play()
+				end)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X, Pos.Y, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame .Z)
+			end
+		end)
+	end
+	--// CicleTween
+	local radius = 30
+	local angle = 0
+	function getNextPosition(center)
+		angle = angle + 15
+		return center + Vector3.new(math.sin(math.rad(angle)) * radius, 10, math.cos(math.rad(angle)) * radius)
+	end
 	--// Summon And Kill Dark Beard
 	spawn(function()
 		while wait() do
-			if getgenv().Setting.ModeFarm.SummonKillDarkbeard == true then
-				local g = game.Player.LocalPlayer
-				if game.Players.LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") or game.Players.LocalPlayer.Character:FindFirstChild("Fist of Darkness") then
-					AutoFarmChest = false
-					EquipWeapon("Fist of Darkness")
-					topos(CFrame.new(3777.58618, 14.8764334, -3498.81909, 0.13158533, 1.16175372e-08, -0.991304874, -9.53944035e-10, 1, 1.15928129e-08, 0.991304874, -5.79794768e-10, 0.13158533))
-					for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-						if v.Name == "Darkbeard [Lv. 1000] [Raid Boss]" then
-							repeat wait(0.1)
-								if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HasBuso") then
-									game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
+			if getgenv().Setting.ModFarm.SummonKillDarkbeard and gotobegod then
+				pcall(function()
+					local g = game.Player.LocalPlayer
+					if g.Backpack:FindFirstChild("Fist of Darkness") or g.Character:FindFirstChild("Fist of Darkness") then
+						AutoFarmChest = false
+						equip("Fist of Darkness")
+						to(CFrame.new(3777.58618, 14.8764334, -3498.81909, 0.13158533, 1.16175372e-08, -0.991304874, -9.53944035e-10, 1, 1.15928129e-08, 0.991304874, -5.79794768e-10, 0.13158533))
+					else
+						if game:GetService("Workspace").Enemies:FindFirstChild("Darkbeard") or game:GetService("ReplicatedStorage"):FindFirstChild("Darkbeard") then
+							for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+								if v and v.Parent and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v.Name == "Darkbeard" then
+									repeat task.wait(0.1)
+										if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HasBuso") then
+											game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
+										end
+										equip("Melee")
+										v.HumanoidRootPart.CanCollide = false
+										v.Head.CanCollide = false
+										v.WalkSpeed = 0
+										to(getNextPosition(v.HumanoidRootPart.CFrame))
+										game:GetService'VirtualUser':CaptureController()
+										game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+										FastAttack = true
+										AttackHit()
+									until(v:FindFirstChild("Humanoid") and v.Humanoid.Health) <= 0 
+									FastAttack = false
+									AutoFarmChest = true
 								end
-								equipToolByToolTip("Melee")
-								v.HumanoidRootPart.CanCollide = false
-								v.Head.CanCollide = false
-								v.WalkSpeed = 0
-								topos(v.HumanoidRootPart.CFrame * CFrame.new(0,10,0))
-								game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-								FastAttack = true
-								AttackHit()
-							until not v.Name == "Darkbeard [Lv. 1000] [Raid Boss]" and not v.Parent
-							FastAttack = false
+							end
 						end
 					end
-				end
+				end)
 			end
 		end
 	end)
 	
 end
-coroutine.wrap(AESCFZ_fake_script)()
-local function OBRVPZR_fake_script() -- Off.Off 
+coroutine.wrap(RSNYB_fake_script)()
+local function KKRK_fake_script() -- Off.Off 
 	local script = Instance.new('LocalScript', Off)
 
 	script.Parent.MouseButton1Click:Connect(function ()
@@ -624,12 +573,12 @@ local function OBRVPZR_fake_script() -- Off.Off
 	end)
 	
 end
-coroutine.wrap(OBRVPZR_fake_script)()
-local function ULHLZ_fake_script() -- On.On 
+coroutine.wrap(KKRK_fake_script)()
+local function UHYTCQ_fake_script() -- On.On 
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function ()
 		AutoFarmChest = true
 	end)
 end
-coroutine.wrap(ULHLZ_fake_script)()
+coroutine.wrap(UHYTCQ_fake_script)()
