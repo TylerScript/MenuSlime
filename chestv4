@@ -196,11 +196,10 @@ fatsupdate.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function RSNYB_fake_script() -- MainChestGui.AutoFarmScript 
+local function EYEPO_fake_script() -- MainChestGui.AutoFarmScript 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Slimex Hub!<Color=/>"):Display()
-	require(game.ReplicatedStorage.Notification).new("<Color=Yellow>https://discord.gg/EDWskkEPBT<Color=/>"):Display()
 	getgenv().Setting = {
 		["WhiteScreen"] = false,
 		["TimeReset"] = 4.5,
@@ -209,7 +208,6 @@ local function RSNYB_fake_script() -- MainChestGui.AutoFarmScript
 			["SummonKillDarkbeard"] = true
 		}
 	}
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/MenuSlime/main/chestv4"))() 
 	local p = game.Players
 	local lp = p.LocalPlayer
 	--- Join Team
@@ -564,8 +562,8 @@ local function RSNYB_fake_script() -- MainChestGui.AutoFarmScript
 	end)
 	
 end
-coroutine.wrap(RSNYB_fake_script)()
-local function KKRK_fake_script() -- Off.Off 
+coroutine.wrap(EYEPO_fake_script)()
+local function CFTRXLM_fake_script() -- Off.Off 
 	local script = Instance.new('LocalScript', Off)
 
 	script.Parent.MouseButton1Click:Connect(function ()
@@ -573,12 +571,12 @@ local function KKRK_fake_script() -- Off.Off
 	end)
 	
 end
-coroutine.wrap(KKRK_fake_script)()
-local function UHYTCQ_fake_script() -- On.On 
+coroutine.wrap(CFTRXLM_fake_script)()
+local function LVCD_fake_script() -- On.On 
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function ()
 		AutoFarmChest = true
 	end)
 end
-coroutine.wrap(UHYTCQ_fake_script)()
+coroutine.wrap(LVCD_fake_script)()
