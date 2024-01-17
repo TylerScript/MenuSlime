@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local Chest = Instance.new("ScreenGui")
 local MainChestGui = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Chestimg = Instance.new("ImageLabel")
@@ -14,14 +15,15 @@ local Menu = Instance.new("Frame")
 local bbname = Instance.new("TextButton")
 local Off = Instance.new("TextButton")
 local On = Instance.new("TextButton")
-local Update = Instance.new("TextButton")
-local Update2 = Instance.new("TextButton")
-local Update3 = Instance.new("TextButton")
 
 -- Properties:
 
+Chest.Name = "Chest"
+Chest.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Chest.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
 MainChestGui.Name = "MainChestGui"
-MainChestGui.Parent = game.StarterGui.Chest
+MainChestGui.Parent = Chest
 MainChestGui.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 MainChestGui.BackgroundTransparency = 0.700
 MainChestGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -141,67 +143,16 @@ On.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 On.TextWrapped = true
 On.TextXAlignment = Enum.TextXAlignment.Left
 
-Update.Name = "Update"
-Update.Parent = MainChestGui
-Update.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Update.BackgroundTransparency = 1.000
-Update.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Update.BorderSizePixel = 0
-Update.Position = UDim2.new(0, 13, 0, 68)
-Update.Size = UDim2.new(0, 200, 0, 19)
-Update.Font = Enum.Font.Gotham
-Update.Text = "+ Fix Lag Hop Server"
-Update.TextColor3 = Color3.fromRGB(255, 255, 255)
-Update.TextScaled = true
-Update.TextSize = 14.000
-Update.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Update.TextWrapped = true
-Update.TextXAlignment = Enum.TextXAlignment.Left
-
-Update2.Name = "Update2"
-Update2.Parent = MainChestGui
-Update2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Update2.BackgroundTransparency = 1.000
-Update2.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Update2.BorderSizePixel = 0
-Update2.Position = UDim2.new(0, 13, 0, 96)
-Update2.Size = UDim2.new(0, 200, 0, 19)
-Update2.Font = Enum.Font.Gotham
-Update2.Text = "+ Auto farm Fast"
-Update2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Update2.TextScaled = true
-Update2.TextSize = 14.000
-Update2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Update2.TextWrapped = true
-Update2.TextXAlignment = Enum.TextXAlignment.Left
-
-Update3.Name = "Update3"
-Update3.Parent = MainChestGui
-Update3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Update3.BackgroundTransparency = 1.000
-Update3.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Update3.BorderSizePixel = 0
-Update3.Position = UDim2.new(0, 13, 0, 124)
-Update3.Size = UDim2.new(0, 200, 0, 19)
-Update3.Font = Enum.Font.Gotham
-Update3.Text = "+ Kill Dark Beard"
-Update3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Update3.TextScaled = true
-Update3.TextSize = 14.000
-Update3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Update3.TextWrapped = true
-Update3.TextXAlignment = Enum.TextXAlignment.Left
-
 -- Scripts:
 
-local function QHPU_fake_script() -- MainChestGui.MoveMain 
+local function SDBVBIK_fake_script() -- MainChestGui.MoveMain 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(QHPU_fake_script)()
-local function FLLXLCR_fake_script() -- MainChestGui.AutoFarmScript 
+coroutine.wrap(SDBVBIK_fake_script)()
+local function HKHCT_fake_script() -- MainChestGui.AutoFarmScript 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	getgenv().Setting = {
@@ -675,8 +626,8 @@ local function FLLXLCR_fake_script() -- MainChestGui.AutoFarmScript
 		end
 	end)
 end
-coroutine.wrap(FLLXLCR_fake_script)()
-local function EEMISQK_fake_script() -- Off.Off 
+coroutine.wrap(HKHCT_fake_script)()
+local function UBNC_fake_script() -- Off.Off 
 	local script = Instance.new('LocalScript', Off)
 
 	script.Parent.MouseButton1Click:Connect(function ()
@@ -684,12 +635,12 @@ local function EEMISQK_fake_script() -- Off.Off
 	end)
 	
 end
-coroutine.wrap(EEMISQK_fake_script)()
-local function RKFYZ_fake_script() -- On.On 
+coroutine.wrap(UBNC_fake_script)()
+local function FVCEO_fake_script() -- On.On 
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function ()
 		AutoFarmChest = true
 	end)
 end
-coroutine.wrap(RKFYZ_fake_script)()
+coroutine.wrap(FVCEO_fake_script)()
