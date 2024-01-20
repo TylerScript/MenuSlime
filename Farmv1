@@ -31,11 +31,10 @@ MainChestGui.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 MainChestGui.BackgroundTransparency = 0.700
 MainChestGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainChestGui.BorderSizePixel = 0
-MainChestGui.Local dragable = true
 MainChestGui.ClipsDescendants = true
 MainChestGui.Position = UDim2.new(0, 242, 0, 118)
 MainChestGui.Size = UDim2.new(0, 346, 0, 238)
-
+	
 UICorner.Parent = MainChestGui
 
 Chestimg.Name = "Chestimg"
