@@ -9,15 +9,22 @@ local UICorner = Instance.new("UICorner")
 local Chestimg = Instance.new("ImageLabel")
 local UIStroke = Instance.new("UIStroke")
 local NameMain = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local Robloximg = Instance.new("ImageLabel")
 local OnOff = Instance.new("Frame")
 local Menu = Instance.new("Frame")
 local bbname = Instance.new("TextButton")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 local Off = Instance.new("TextButton")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 local On = Instance.new("TextButton")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
 local update = Instance.new("TextLabel")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
 local update2c = Instance.new("TextLabel")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
 local fatsupdate = Instance.new("TextLabel")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
 
 -- Properties:
 
@@ -32,9 +39,9 @@ MainChestGui.BackgroundTransparency = 0.700
 MainChestGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainChestGui.BorderSizePixel = 0
 MainChestGui.ClipsDescendants = true
-MainChestGui.Position = UDim2.new(0, 242, 0, 118)
+MainChestGui.Position = UDim2.new(0, 242, 0, 121)
 MainChestGui.Size = UDim2.new(0, 346, 0, 238)
-	
+
 UICorner.Parent = MainChestGui
 
 Chestimg.Name = "Chestimg"
@@ -43,7 +50,7 @@ Chestimg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Chestimg.BackgroundTransparency = 1.000
 Chestimg.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Chestimg.BorderSizePixel = 0
-Chestimg.Position = UDim2.new(0, 157, 0, 49)
+Chestimg.Position = UDim2.new(0, 156, 0, 46)
 Chestimg.Size = UDim2.new(0, 238, 0, 228)
 Chestimg.Image = "rbxassetid://16001572935"
 
@@ -56,7 +63,7 @@ NameMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 NameMain.BackgroundTransparency = 1.000
 NameMain.BorderColor3 = Color3.fromRGB(255, 255, 255)
 NameMain.BorderSizePixel = 0
-NameMain.Position = UDim2.new(0, 52, 0, 8)
+NameMain.Position = UDim2.new(0, 51, 0, 8)
 NameMain.Size = UDim2.new(0, 200, 0, 19)
 NameMain.Font = Enum.Font.Gotham
 NameMain.Text = "SlimeX Chest"
@@ -67,13 +74,16 @@ NameMain.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 NameMain.TextWrapped = true
 NameMain.TextXAlignment = Enum.TextXAlignment.Left
 
+UITextSizeConstraint.Parent = NameMain
+UITextSizeConstraint.MaxTextSize = 19
+
 Robloximg.Name = "Robloximg"
 Robloximg.Parent = MainChestGui
 Robloximg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Robloximg.BackgroundTransparency = 1.000
 Robloximg.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Robloximg.BorderSizePixel = 0
-Robloximg.Position = UDim2.new(0, 13, 0, 3)
+Robloximg.Position = UDim2.new(0, 12, 0, 3)
 Robloximg.Size = UDim2.new(0, 30, 0, 30)
 Robloximg.Image = "rbxassetid://16001663992"
 
@@ -83,8 +93,8 @@ OnOff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 OnOff.BackgroundTransparency = 1.000
 OnOff.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OnOff.BorderSizePixel = 0
-OnOff.Position = UDim2.new(0.493055552, 0, 0.785857677, 0)
-OnOff.Size = UDim2.new(0, 205, 0, 48)
+OnOff.Position = UDim2.new(0, 198, 0, 186)
+OnOff.Size = UDim2.new(0, 101, 0, 48)
 
 Menu.Name = "Menu"
 Menu.Parent = MainChestGui
@@ -92,8 +102,8 @@ Menu.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 Menu.BackgroundTransparency = 0.600
 Menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Menu.BorderSizePixel = 0
-Menu.Position = UDim2.new(0, 0, 0.773662508, 0)
-Menu.Size = UDim2.new(0, 432, 0, 55)
+Menu.Position = UDim2.new(0, 0, 0, 184)
+Menu.Size = UDim2.new(0, 346, 0, 55)
 
 bbname.Name = "bbname"
 bbname.Parent = MainChestGui
@@ -101,7 +111,7 @@ bbname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 bbname.BackgroundTransparency = 1.000
 bbname.BorderColor3 = Color3.fromRGB(255, 255, 255)
 bbname.BorderSizePixel = 0
-bbname.Position = UDim2.new(0, 11, 0, 202)
+bbname.Position = UDim2.new(0, 10, 0, 202)
 bbname.Size = UDim2.new(0, 200, 0, 19)
 bbname.Font = Enum.Font.Gotham
 bbname.Text = "Auto Farm Chest"
@@ -111,6 +121,9 @@ bbname.TextSize = 14.000
 bbname.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 bbname.TextWrapped = true
 bbname.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_2.Parent = bbname
+UITextSizeConstraint_2.MaxTextSize = 19
 
 Off.Name = "Off"
 Off.Parent = MainChestGui
@@ -129,13 +142,16 @@ Off.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Off.TextWrapped = true
 Off.TextXAlignment = Enum.TextXAlignment.Left
 
+UITextSizeConstraint_3.Parent = Off
+UITextSizeConstraint_3.MaxTextSize = 19
+
 On.Name = "On"
 On.Parent = MainChestGui
 On.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 On.BackgroundTransparency = 1.000
 On.BorderColor3 = Color3.fromRGB(255, 255, 255)
 On.BorderSizePixel = 0
-On.Position = UDim2.new(0, 211, 0, 202)
+On.Position = UDim2.new(0, 210, 0, 202)
 On.Size = UDim2.new(0, 30, 0, 19)
 On.Font = Enum.Font.Gotham
 On.Text = "On"
@@ -146,13 +162,16 @@ On.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 On.TextWrapped = true
 On.TextXAlignment = Enum.TextXAlignment.Left
 
+UITextSizeConstraint_4.Parent = On
+UITextSizeConstraint_4.MaxTextSize = 19
+
 update.Name = "update"
 update.Parent = MainChestGui
 update.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 update.BackgroundTransparency = 1.000
 update.BorderColor3 = Color3.fromRGB(0, 0, 0)
 update.BorderSizePixel = 0
-update.Position = UDim2.new(0.0321782194, 0, 0.239837393, 0)
+update.Position = UDim2.new(0, 10, 0, 57)
 update.Size = UDim2.new(0, 200, 0, 21)
 update.Font = Enum.Font.Gotham
 update.Text = "+ Summon Kill Darkbeard"
@@ -162,13 +181,16 @@ update.TextSize = 14.000
 update.TextWrapped = true
 update.TextXAlignment = Enum.TextXAlignment.Left
 
+UITextSizeConstraint_5.Parent = update
+UITextSizeConstraint_5.MaxTextSize = 17
+
 update2c.Name = "update2c"
 update2c.Parent = MainChestGui
 update2c.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 update2c.BackgroundTransparency = 1.000
 update2c.BorderColor3 = Color3.fromRGB(0, 0, 0)
 update2c.BorderSizePixel = 0
-update2c.Position = UDim2.new(0.0321782194, 0, 0.34959349, 0)
+update2c.Position = UDim2.new(0, 10, 0, 83)
 update2c.Size = UDim2.new(0, 200, 0, 18)
 update2c.Font = Enum.Font.Gotham
 update2c.Text = "+ Fix Lag"
@@ -178,13 +200,16 @@ update2c.TextSize = 14.000
 update2c.TextWrapped = true
 update2c.TextXAlignment = Enum.TextXAlignment.Left
 
+UITextSizeConstraint_6.Parent = update2c
+UITextSizeConstraint_6.MaxTextSize = 18
+
 fatsupdate.Name = "fatsupdate"
 fatsupdate.Parent = MainChestGui
 fatsupdate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 fatsupdate.BackgroundTransparency = 1.000
 fatsupdate.BorderColor3 = Color3.fromRGB(0, 0, 0)
 fatsupdate.BorderSizePixel = 0
-fatsupdate.Position = UDim2.new(0.0321782194, 0, 0.463414639, 0)
+fatsupdate.Position = UDim2.new(0, 10, 0, 110)
 fatsupdate.Size = UDim2.new(0, 200, 0, 18)
 fatsupdate.Font = Enum.Font.Gotham
 fatsupdate.Text = "+ Collect Chest Fast"
@@ -194,9 +219,12 @@ fatsupdate.TextSize = 14.000
 fatsupdate.TextWrapped = true
 fatsupdate.TextXAlignment = Enum.TextXAlignment.Left
 
+UITextSizeConstraint_7.Parent = fatsupdate
+UITextSizeConstraint_7.MaxTextSize = 18
+
 -- Scripts:
 
-local function TGHAWW_fake_script() -- MainChestGui.AutoFarmScript 
+local function IUXJHSI_fake_script() -- MainChestGui.AutoFarmScript 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Auto Farm Chest Slimex Hub!<Color=/>"):Display()
@@ -562,8 +590,8 @@ local function TGHAWW_fake_script() -- MainChestGui.AutoFarmScript
 	end)
 	
 end
-coroutine.wrap(TGHAWW_fake_script)()
-local function XLMD_fake_script() -- Off.Off 
+coroutine.wrap(IUXJHSI_fake_script)()
+local function IEIC_fake_script() -- Off.Off 
 	local script = Instance.new('LocalScript', Off)
 
 	script.Parent.MouseButton1Click:Connect(function ()
@@ -571,19 +599,19 @@ local function XLMD_fake_script() -- Off.Off
 	end)
 	
 end
-coroutine.wrap(XLMD_fake_script)()
-local function FBWZAQ_fake_script() -- On.On 
+coroutine.wrap(IEIC_fake_script)()
+local function EZSYOF_fake_script() -- On.On 
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function ()
 		AutoFarmChest = true
 	end)
 end
-coroutine.wrap(FBWZAQ_fake_script)()
-local function WPLYMX_fake_script() -- MainChestGui.MoveChest 
+coroutine.wrap(EZSYOF_fake_script)()
+local function UYXYBBZ_fake_script() -- MainChestGui.MoveChest 
 	local script = Instance.new('LocalScript', MainChestGui)
 
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end
-coroutine.wrap(WPLYMX_fake_script)()
+coroutine.wrap(UYXYBBZ_fake_script)()
